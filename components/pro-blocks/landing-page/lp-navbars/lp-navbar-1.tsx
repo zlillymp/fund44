@@ -6,10 +6,12 @@ import { useState } from "react"
 import Link from "next/link"
 
 const MENU_ITEMS = [
-  { label: "Loan Programs", href: "#programs" },
-  { label: "How It Works", href: "#process" },
-  { label: "Why Fund44", href: "#why" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Loan Programs", href: "/#programs" },
+  { label: "How It Works", href: "/#process" },
+  { label: "Why Fund44", href: "/#why" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Apply", href: "/apply" },
+  { label: "Portal", href: "/portal" },
 ] as const
 
 interface NavMenuItemsProps {
@@ -51,7 +53,7 @@ export function LpNavbar1() {
 
         <div className="hidden w-full flex-row justify-end gap-4 md:flex items-center">
           <NavMenuItems />
-          <Link href="#eligibility">
+          <Link href="/#eligibility">
             <Button className="shadow-sm bg-primary hover:bg-primary/90 px-5">
               Check Eligibility
             </Button>
@@ -61,7 +63,7 @@ export function LpNavbar1() {
         {isMenuOpen && (
           <div className="flex w-full flex-col justify-end gap-4 pb-2.5 md:hidden">
             <NavMenuItems />
-            <Link href="#eligibility">
+            <Link href="/#eligibility">
               <Button className="w-full shadow-sm">Check Eligibility</Button>
             </Link>
           </div>

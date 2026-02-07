@@ -1,6 +1,7 @@
 "use client"
 
-import { Building2, LineChart, Wallet, Banknote } from "lucide-react"
+import Link from "next/link"
+import { Building2, LineChart, Wallet, Banknote, ArrowRight } from "lucide-react"
 import { Tagline } from "@/components/pro-blocks/landing-page/tagline"
 
 const features = [
@@ -10,6 +11,7 @@ const features = [
     description:
       "The most versatile SBA loan. Use for working capital, equipment, debt refinancing, or business acquisition. Loans up to $5M with terms up to 25 years.",
     highlight: "Up to $5M",
+    href: "/loans/sba-7a",
   },
   {
     icon: Wallet,
@@ -17,6 +19,7 @@ const features = [
     description:
       "Long-term, fixed-rate financing for major assets — commercial real estate, heavy equipment, and large-scale expansion. Low down payments available.",
     highlight: "Fixed rates",
+    href: "/loans/sba-504",
   },
   {
     icon: Banknote,
@@ -24,6 +27,7 @@ const features = [
     description:
       "Keep operations running smoothly with flexible working capital solutions. Cover payroll, inventory, seasonal fluctuations, or growth opportunities.",
     highlight: "Flexible terms",
+    href: "/loans/working-capital",
   },
   {
     icon: LineChart,
@@ -31,6 +35,7 @@ const features = [
     description:
       "Access capital when you need it. Draw funds as needed, pay interest only on what you use, and replenish your credit line as you repay.",
     highlight: "Draw as needed",
+    href: "/loans/lines-of-credit",
   },
 ]
 
@@ -60,7 +65,14 @@ export function FeatureSection9() {
                 </span>
               </div>
               <h3 className="heading-sm mb-3 text-foreground">{feature.title}</h3>
-              <p className="text-muted-foreground leading-relaxed font-light">{feature.description}</p>
+              <p className="text-muted-foreground leading-relaxed font-light mb-4">{feature.description}</p>
+              <Link
+                href={feature.href}
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
+              >
+                Learn More
+                <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
+              </Link>
             </div>
           ))}
         </div>

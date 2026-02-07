@@ -1,15 +1,46 @@
+"use client"
+
+import { useEffect, useRef } from "react"
 import { LpNavbar1 } from "@/components/pro-blocks/landing-page/lp-navbars/lp-navbar-1"
 import { Footer1 } from "@/components/pro-blocks/landing-page/footers/footer-1"
 import { Shield } from "lucide-react"
 
+function LendflowWidget() {
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!containerRef.current) return
+
+    // Clear any previous widget
+    containerRef.current.innerHTML = ""
+
+    // Create the widget container div
+    const widgetDiv = document.createElement("div")
+    widgetDiv.id = "container"
+    widgetDiv.style.maxWidth = "550px"
+    widgetDiv.style.minWidth = "300px"
+    widgetDiv.style.margin = "0 auto"
+    containerRef.current.appendChild(widgetDiv)
+
+    // Load the LendFlow loader script
+    const script = document.createElement("script")
+    const widgetKey = process.env.NEXT_PUBLIC_LENDFLOW_WIDGET_KEY || ""
+    script.src = `https://iw.lendflow.com/js/lendflow-loader.js?env=${widgetKey}`
+    script.async = true
+    containerRef.current.appendChild(script)
+
+    return () => {
+      // Cleanup on unmount
+      if (containerRef.current) {
+        containerRef.current.innerHTML = ""
+      }
+    }
+  }, [])
+
+  return <div ref={containerRef} className="min-h-[600px]" />
+}
+
 export default function ApplyPage() {
-  const clientId = process.env.LENDFLOW_CLIENT_ID || ""
-  const workflowId = process.env.LENDFLOW_WORKFLOW_ID || ""
-
-  const iframeSrc = clientId && workflowId
-    ? `https://app.lendflow.com/applications/new?client_id=${clientId}&workflow_id=${workflowId}`
-    : ""
-
   return (
     <>
       <LpNavbar1 />
@@ -26,28 +57,8 @@ export default function ApplyPage() {
             </div>
           </div>
 
-          <div className="max-w-4xl mx-auto rounded-2xl border border-border bg-background shadow-lg overflow-hidden">
-            {iframeSrc ? (
-              <iframe
-                src={iframeSrc}
-                width="100%"
-                height="800"
-                frameBorder="0"
-                style={{ border: "none", minHeight: "600px" }}
-                title="Fund44 Loan Application"
-                allow="clipboard-write"
-              />
-            ) : (
-              <div className="p-12 text-center text-muted-foreground">
-                <p className="text-lg font-medium mb-2">Application form loading...</p>
-                <p className="text-sm font-light">
-                  If this persists, please contact us at{" "}
-                  <a href="mailto:apply@fund44.com" className="text-primary underline">
-                    apply@fund44.com
-                  </a>
-                </p>
-              </div>
-            )}
+          <div className="max-w-4xl mx-auto rounded-2xl border border-border bg-background shadow-lg overflow-hidden p-8">
+            <LendflowWidget />
           </div>
         </div>
       </main>
