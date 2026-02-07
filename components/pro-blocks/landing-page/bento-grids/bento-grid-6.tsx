@@ -15,7 +15,7 @@ export function BentoGrid6() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 auto-rows-[280px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 auto-rows-auto md:auto-rows-[280px]">
           {/* Card 1: Advocacy - Large */}
           <div className="md:col-span-2 row-span-1 relative overflow-hidden rounded-xl border border-border bg-background p-8 md:p-10 flex flex-col justify-between group hover:shadow-md transition-all duration-300">
             <div className="relative z-10">
