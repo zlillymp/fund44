@@ -13,20 +13,20 @@ const steps = [
   {
     icon: Search,
     step: "02",
-    title: "We Match You",
-    description: "Our team reviews your application and matches you with the SBA loan program and lender best suited to your business.",
+    title: "Get Matched",
+    description: "Our platform automatically matches you with the SBA loan programs and lenders best suited to your business.",
   },
   {
     icon: CheckCircle,
     step: "03",
-    title: "Get Approved",
-    description: "We prepare and submit your package, then advocate for your approval. You'll have a dedicated point of contact throughout.",
+    title: "Review Offers",
+    description: "Log into your secure portal to compare offers, see terms, and choose the option that works best for you.",
   },
   {
     icon: Banknote,
     step: "04",
     title: "Receive Funding",
-    description: "Once approved, funds are deposited directly. You can track everything through your secure borrower portal.",
+    description: "Accept your offer and funds are deposited directly. Track everything from application to funding in your portal.",
   },
 ]
 
@@ -44,7 +44,7 @@ export function ProcessSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4">
           {steps.map((step, index) => (
-            <div key={index} className="relative flex flex-col items-center text-center group">
+            <div key={index} className="relative flex flex-col items-start text-left md:items-center md:text-center group">
               {/* Connector line (desktop only) */}
               {index < steps.length - 1 && (
                 <div className="hidden md:block absolute top-8 left-[calc(50%+32px)] right-[calc(-50%+32px)] h-px bg-border" />

@@ -17,7 +17,7 @@ export function HeroSection2() {
           {/* Trust signal */}
           <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10">
             <Shield className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Your Business Funding Advocate</span>
+            <span className="text-sm font-medium text-primary">Small Business Lending Marketplace</span>
           </div>
 
           <div className="flex flex-col gap-5">
@@ -30,8 +30,7 @@ export function HeroSection2() {
             </h1>
 
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto font-light">
-              Fund44 connects small businesses with SBA 7(a) and 504 loans, working capital, and lines of credit.
-              Straightforward process, transparent terms, real people.
+              Fund44 is a small business lending marketplace. Apply once, get matched with SBA 7(a) and 504 loans, working capital, and lines of credit — automatically.
             </p>
           </div>
 

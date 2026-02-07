@@ -13,7 +13,7 @@ export function Footer1() {
               <span className="text-xl font-bold tracking-tight">Fund<span className="text-amber">44</span></span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-5 font-light">
-              A business funding advocate helping small businesses access SBA loans and lines of credit with transparency and integrity.
+              A small business lending marketplace. Apply once, get matched with SBA-approved lenders, and compare offers — all in one place.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
@@ -99,7 +99,7 @@ export function Footer1() {
         <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground font-light">
           <p>&copy; {new Date().getFullYear()} Fund44. All rights reserved.</p>
           <p className="text-xs text-muted-foreground/70 max-w-md text-center md:text-right">
-            Fund44 is not a lender. We connect businesses with SBA-approved lending partners. All loan decisions are made by the lending institutions.
+            Fund44 is not a lender or broker. Our marketplace connects businesses with SBA-approved lending partners. All loan decisions are made by the lending institutions.
           </p>
         </div>
       </div>

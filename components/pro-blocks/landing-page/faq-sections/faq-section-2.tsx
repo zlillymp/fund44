@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "What is Fund44?",
     answer:
-      "Fund44 is a business funding advocate. We help small businesses navigate the SBA loan process by matching you with the right loan program and lender, preparing your application, and guiding you through to funding. We are not a lender — we work on your behalf to get you the best terms possible.",
+      "Fund44 is a small business lending marketplace. When you apply, our platform automatically matches you with SBA loan programs and lenders that fit your business. You can compare offers, review terms, and track your application — all through your secure portal. We are not a lender or broker.",
   },
   {
     question: "What are the basic requirements for an SBA loan?",
@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "What can I use the loan funds for?",
     answer:
-      "SBA loan funds can be used for most legitimate business purposes: working capital, equipment purchases, commercial real estate, inventory, hiring, debt refinancing, and business acquisition. Specific uses depend on the loan program. We'll help you match the right program to your need.",
+      "SBA loan funds can be used for most legitimate business purposes: working capital, equipment purchases, commercial real estate, inventory, hiring, debt refinancing, and business acquisition. Specific uses depend on the loan program — our platform will match you with the right one.",
   },
   {
     question: "What if I don't qualify?",

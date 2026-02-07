@@ -11,7 +11,7 @@ export function BentoGrid6() {
           <Tagline>Why Fund44</Tagline>
           <h2 className="heading-lg mb-4 text-foreground">A better way to get funded</h2>
           <p className="text-lg text-muted-foreground font-light">
-            We act as your advocate — not a lender. Our job is to match your business with the right SBA loan program and guide you through every step.
+            Fund44 is a lending marketplace — not a lender or broker. Our platform automatically matches your business with the right SBA loan programs and lenders.
           </p>
         </div>
 
@@ -22,9 +22,9 @@ export function BentoGrid6() {
               <div className="h-11 w-11 rounded-lg bg-amber/10 flex items-center justify-center mb-5">
                 <Handshake className="h-5 w-5 text-amber" />
               </div>
-              <h3 className="heading-md mb-2">Your Business Advocate</h3>
+              <h3 className="heading-md mb-2">One Application, Many Lenders</h3>
               <p className="text-muted-foreground max-w-md font-light leading-relaxed">
-                We don&apos;t just submit your application — we prepare it, position it, and advocate for your approval with the right lender for your situation.
+                Apply once and our marketplace automatically matches you with multiple SBA-approved lenders competing for your business.
               </p>
             </div>
             <div className="absolute right-0 bottom-0 w-64 h-64 bg-gradient-to-tl from-amber/5 to-transparent rounded-tl-full translate-x-1/3 translate-y-1/3" />
@@ -38,7 +38,7 @@ export function BentoGrid6() {
               </div>
               <h3 className="heading-sm mb-2">Streamlined Process</h3>
               <p className="text-muted-foreground text-sm font-light leading-relaxed">
-                One application. We handle the paperwork, lender matching, and follow-up so you can focus on running your business.
+                No back-and-forth. Apply online, get matched instantly, and review offers in your secure portal — all in one place.
               </p>
             </div>
           </div>
