@@ -1,6 +1,5 @@
 "use client"
 
-import { Logo } from "@/components/pro-blocks/logo"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
@@ -37,9 +36,8 @@ export function LpNavbar1() {
     <nav className="bg-background/80 backdrop-blur-lg sticky top-0 isolate z-50 border-b border-border/50 py-3 md:py-3.5">
       <div className="relative container m-auto flex flex-col justify-between gap-4 px-6 md:flex-row md:items-center md:gap-6">
         <div className="flex items-center justify-between gap-2">
-          <Link href="/" className="flex items-center gap-2.5">
-            <Logo />
-            <span className="text-xl font-bold tracking-tight text-foreground">Fund<span className="text-amber">44</span></span>
+          <Link href="/" className="flex items-center">
+            <span className="text-2xl font-bold tracking-tight text-foreground">Fund<span className="text-amber">44</span></span>
           </Link>
           <Button
             variant="ghost"

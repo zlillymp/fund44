@@ -1,6 +1,5 @@
 "use client"
 
-import { Logo } from "@/components/pro-blocks/logo"
 import { Linkedin } from "lucide-react"
 import Link from "next/link"
 
@@ -10,9 +9,8 @@ export function Footer1() {
       <div className="container-padding-x container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center gap-2.5 mb-5">
-              <Logo />
-              <span className="text-lg font-bold tracking-tight">Fund<span className="text-amber">44</span></span>
+            <div className="flex items-center mb-5">
+              <span className="text-xl font-bold tracking-tight">Fund<span className="text-amber">44</span></span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-5 font-light">
               A business funding advocate helping small businesses access SBA loans and lines of credit with transparency and integrity.
