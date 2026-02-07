@@ -51,7 +51,7 @@ export function LpNavbar1() {
 
         <div className="hidden w-full flex-row justify-end gap-4 md:flex items-center">
           <NavMenuItems />
-          <Link href="#apply">
+          <Link href="#eligibility">
             <Button className="shadow-sm bg-primary hover:bg-primary/90 px-5">
               Check Eligibility
             </Button>
@@ -61,7 +61,7 @@ export function LpNavbar1() {
         {isMenuOpen && (
           <div className="flex w-full flex-col justify-end gap-4 pb-2.5 md:hidden">
             <NavMenuItems />
-            <Link href="#apply">
+            <Link href="#eligibility">
               <Button className="w-full shadow-sm">Check Eligibility</Button>
             </Link>
           </div>

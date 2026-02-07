@@ -37,12 +37,14 @@ export function HeroSection2() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button size="lg" className="shadow-md px-8 text-base h-12">
-              Check Your Eligibility
-              <ArrowRight className="ml-2 h-4 w-4" />
+            <Button size="lg" className="shadow-md px-8 text-base h-12" asChild>
+              <a href="#eligibility">
+                Check Your Eligibility
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
             </Button>
-            <Button variant="outline" size="lg" className="bg-transparent text-base h-12 px-8 border-border">
-              View Loan Programs
+            <Button variant="outline" size="lg" className="bg-transparent text-base h-12 px-8 border-border" asChild>
+              <a href="#programs">View Loan Programs</a>
             </Button>
           </div>
 
