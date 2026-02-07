@@ -17,7 +17,7 @@ export function HeroSection2() {
           {/* Trust signal */}
           <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10">
             <Shield className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium text-primary">SBA Preferred Lending Partner</span>
+            <span className="text-sm font-medium text-primary">Your Business Funding Advocate</span>
           </div>
 
           <div className="flex flex-col gap-5">
