@@ -1,6 +1,6 @@
 "use client"
 import { Button } from "@/components/ui/button"
-import { Check, ArrowRight } from "lucide-react"
+import { CheckIcon, ArrowRightIcon } from "@heroicons/react/24/outline"
 import { Tagline } from "@/components/pro-blocks/landing-page/tagline"
 
 const loanOptions = [
@@ -53,7 +53,7 @@ export function PricingSection3() {
     <section className="bg-background section-padding-y border-b border-border/50" aria-labelledby="pricing-section-title-3" id="apply">
       <div className="container-padding-x container mx-auto">
         <div className="flex flex-col items-center gap-12">
-          <div className="flex max-w-2xl flex-col items-center text-center gap-4">
+          <div className="mx-auto flex max-w-2xl flex-col items-center text-center gap-4">
             <Tagline>Loan Comparison</Tagline>
             <h2 id="pricing-section-title-3" className="heading-lg text-foreground">
               Find the right loan for your business
@@ -88,7 +88,7 @@ export function PricingSection3() {
                 <ul className="flex-1 space-y-3.5 mb-8">
                   {option.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-foreground/80">
-                      <Check className="h-4 w-4 text-amber shrink-0 mt-0.5" />
+                      <CheckIcon className="h-4 w-4 text-amber shrink-0 mt-0.5" />
                       <span className="font-light">{feature}</span>
                     </li>
                   ))}
@@ -99,7 +99,7 @@ export function PricingSection3() {
                   variant={option.popular ? "default" : "ghost"}
                 >
                   {option.cta}
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRightIcon className="ml-2 h-4 w-4" />
                 </Button>
               </div>
             ))}

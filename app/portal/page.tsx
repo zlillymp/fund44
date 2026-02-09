@@ -3,7 +3,7 @@
 import { useEffect } from "react"
 import { LpNavbar1 } from "@/components/pro-blocks/landing-page/lp-navbars/lp-navbar-1"
 import { Footer1 } from "@/components/pro-blocks/landing-page/footers/footer-1"
-import { Shield } from "lucide-react"
+import { ShieldCheckIcon } from "@heroicons/react/24/outline"
 
 export default function PortalPage() {
   useEffect(() => {
@@ -34,7 +34,7 @@ export default function PortalPage() {
               place.
             </p>
             <div className="flex items-center justify-center gap-2 mt-4 text-sm text-muted-foreground">
-              <Shield className="h-4 w-4 text-primary/70" />
+              <ShieldCheckIcon className="h-4 w-4 text-primary/70" />
               <span>Secure login · Bank-level encryption</span>
             </div>
           </div>

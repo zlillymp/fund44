@@ -1,12 +1,12 @@
 "use client"
 
 import Link from "next/link"
-import { Building2, LineChart, Wallet, Banknote, ArrowRight } from "lucide-react"
+import { BuildingOffice2Icon, ChartBarIcon, WalletIcon, BanknotesIcon, ArrowRightIcon } from "@heroicons/react/24/outline"
 import { Tagline } from "@/components/pro-blocks/landing-page/tagline"
 
 const features = [
   {
-    icon: Building2,
+    icon: BuildingOffice2Icon,
     title: "SBA 7(a) Loans",
     description:
       "The most versatile SBA loan. Use for working capital, equipment, debt refinancing, or business acquisition. Loans up to $5M with terms up to 25 years.",
@@ -14,7 +14,7 @@ const features = [
     href: "/loans/sba-7a",
   },
   {
-    icon: Wallet,
+    icon: WalletIcon,
     title: "SBA 504 Loans",
     description:
       "Long-term, fixed-rate financing for major assets — commercial real estate, heavy equipment, and large-scale expansion. Low down payments available.",
@@ -22,7 +22,7 @@ const features = [
     href: "/loans/sba-504",
   },
   {
-    icon: Banknote,
+    icon: BanknotesIcon,
     title: "Working Capital",
     description:
       "Keep operations running smoothly with flexible working capital solutions. Cover payroll, inventory, seasonal fluctuations, or growth opportunities.",
@@ -30,7 +30,7 @@ const features = [
     href: "/loans/working-capital",
   },
   {
-    icon: LineChart,
+    icon: ChartBarIcon,
     title: "Business Lines of Credit",
     description:
       "Access capital when you need it. Draw funds as needed, pay interest only on what you use, and replenish your credit line as you repay.",
@@ -71,7 +71,7 @@ export function FeatureSection9() {
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
               >
                 Learn More
-                <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
+                <ArrowRightIcon className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
               </Link>
             </div>
           ))}

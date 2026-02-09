@@ -42,12 +42,30 @@ const faqs = [
 ]
 
 export function FaqSection2() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  }
+
   return (
-    <section id="faq" className="section-padding-y bg-secondary/40 border-y border-border/50">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <section id="faq" className="section-padding-y bg-secondary/40 border-y border-border/50">
       <div className="container-padding-x container mx-auto max-w-3xl">
-        <div className="text-center mb-12">
+        <div className="mb-12 mx-auto flex max-w-2xl flex-col items-center text-center gap-4">
           <Tagline>FAQ</Tagline>
-          <h2 className="heading-lg mb-4 text-foreground">Common questions</h2>
+          <h2 className="heading-lg text-foreground">Common questions</h2>
           <p className="text-lg text-muted-foreground font-light">
             Straightforward answers about SBA loans and how Fund44 works.
           </p>
@@ -69,5 +87,6 @@ export function FaqSection2() {
         </Accordion>
       </div>
     </section>
+    </>
   )
 }

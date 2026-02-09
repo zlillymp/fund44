@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Loader2, CheckCircle2, AlertCircle } from "lucide-react"
+import { ArrowRightIcon, ArrowPathIcon, CheckCircleIcon, ExclamationCircleIcon } from "@heroicons/react/24/outline"
 
 const TIME_IN_BUSINESS_OPTIONS = [
   "3 - 5 Months",
@@ -113,7 +113,7 @@ export function PrequalForm() {
     return (
       <div className="text-center py-8">
         <div className="h-16 w-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-5">
-          <CheckCircle2 className="h-8 w-8 text-green-600" />
+          <CheckCircleIcon className="h-8 w-8 text-green-600" />
         </div>
         <h3 className="heading-sm mb-3">You may qualify!</h3>
         {result.prequalification_amount_min && result.prequalification_amount_max ? (
@@ -131,7 +131,7 @@ export function PrequalForm() {
         <Button asChild size="lg" className="shadow-md px-8">
           <a href="/apply">
             Complete Full Application
-            <ArrowRight className="ml-2 h-4 w-4" />
+            <ArrowRightIcon className="ml-2 h-4 w-4" />
           </a>
         </Button>
       </div>
@@ -141,7 +141,7 @@ export function PrequalForm() {
   if (step === "submitting") {
     return (
       <div className="text-center py-12">
-        <Loader2 className="h-8 w-8 animate-spin text-primary mx-auto mb-4" />
+        <ArrowPathIcon className="h-8 w-8 animate-spin text-primary mx-auto mb-4" />
         <p className="text-muted-foreground font-light">Checking your eligibility...</p>
       </div>
     )
@@ -149,9 +149,61 @@ export function PrequalForm() {
 
   return (
     <div>
+      {/* Step indicator */}
+      <div className="mb-5">
+        <div className="flex items-center justify-center gap-0">
+          {/* Step 1 dot */}
+          <div className="flex flex-col items-center">
+            <div
+              className={`h-3 w-3 rounded-full border-2 ${
+                step === "info" || step === "business"
+                  ? "border-primary bg-primary"
+                  : "border-border bg-border"
+              }`}
+            />
+            <span
+              className={`text-[11px] mt-1.5 font-medium ${
+                step === "info" ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              Contact Info
+            </span>
+          </div>
+          {/* Connecting line */}
+          <div
+            className={`h-0.5 w-12 -mt-4 mx-1 rounded-full ${
+              step === "business" ? "bg-primary" : "bg-border"
+            }`}
+          />
+          {/* Step 2 dot */}
+          <div className="flex flex-col items-center">
+            <div
+              className={`h-3 w-3 rounded-full border-2 ${
+                step === "business"
+                  ? "border-primary bg-primary"
+                  : "border-border bg-border"
+              }`}
+            />
+            <span
+              className={`text-[11px] mt-1.5 font-medium ${
+                step === "business" ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              Business Details
+            </span>
+          </div>
+        </div>
+        {/* Context text */}
+        <p className="text-xs text-muted-foreground text-center mt-2">
+          {step === "info"
+            ? "Tell us about yourself"
+            : "Help us match you with the right lenders"}
+        </p>
+      </div>
+
       {error && (
         <div className="mb-5 flex items-center gap-2 rounded-lg bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700">
-          <AlertCircle className="h-4 w-4 shrink-0" />
+          <ExclamationCircleIcon className="h-4 w-4 shrink-0" />
           {error}
         </div>
       )}
@@ -203,8 +255,8 @@ export function PrequalForm() {
             onClick={() => setStep("business")}
             disabled={!formData.contactName || !formData.email || !formData.businessName}
           >
-            Continue
-            <ArrowRight className="ml-2 h-4 w-4" />
+            Next: Business Details
+            <ArrowRightIcon className="ml-2 h-4 w-4" />
           </Button>
         </div>
       )}
@@ -288,7 +340,7 @@ export function PrequalForm() {
               }
             >
               Check Eligibility
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRightIcon className="ml-2 h-4 w-4" />
             </Button>
           </div>
         </div>

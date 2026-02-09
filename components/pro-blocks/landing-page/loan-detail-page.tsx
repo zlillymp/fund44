@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react"
+import { ArrowLeftIcon, ArrowRightIcon, CheckCircleIcon } from "@heroicons/react/24/outline"
 import { LpNavbar1 } from "@/components/pro-blocks/landing-page/lp-navbars/lp-navbar-1"
 import { Footer1 } from "@/components/pro-blocks/landing-page/footers/footer-1"
 
@@ -41,7 +41,7 @@ export function LoanDetailPage({
               href="/#programs"
               className="inline-flex items-center gap-1.5 text-sm text-background/60 hover:text-background/90 transition-colors mb-8"
             >
-              <ArrowLeft className="h-4 w-4" />
+              <ArrowLeftIcon className="h-4 w-4" />
               All Loan Programs
             </Link>
             <p className="text-primary font-semibold text-sm tracking-wider uppercase mb-3">{subtitle}</p>
@@ -74,7 +74,7 @@ export function LoanDetailPage({
                   <ul className="space-y-3">
                     {section.content.map((item, j) => (
                       <li key={j} className="flex items-start gap-3">
-                        <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                        <CheckCircleIcon className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                         <span className="text-muted-foreground leading-relaxed">{item}</span>
                       </li>
                     ))}
@@ -91,7 +91,7 @@ export function LoanDetailPage({
                 <ul className="space-y-3">
                   {eligibility.map((req, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                      <CheckCircleIcon className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                       <span className="text-muted-foreground leading-relaxed">{req}</span>
                     </li>
                   ))}
@@ -110,7 +110,7 @@ export function LoanDetailPage({
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-3 rounded-lg transition-colors"
               >
                 {ctaText}
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRightIcon className="h-4 w-4" />
               </Link>
             </div>
           </div>

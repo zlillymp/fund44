@@ -1,29 +1,29 @@
 "use client"
 
 import { Tagline } from "@/components/pro-blocks/landing-page/tagline"
-import { FileText, Search, CheckCircle, Banknote } from "lucide-react"
+import { DocumentTextIcon, MagnifyingGlassIcon, CheckCircleIcon, BanknotesIcon } from "@heroicons/react/24/outline"
 
 const steps = [
   {
-    icon: FileText,
+    icon: DocumentTextIcon,
     step: "01",
     title: "Apply Online",
     description: "Complete a simple application in under 10 minutes. We only ask for what lenders actually need.",
   },
   {
-    icon: Search,
+    icon: MagnifyingGlassIcon,
     step: "02",
     title: "Get Matched",
     description: "Our platform automatically matches you with the SBA loan programs and lenders best suited to your business.",
   },
   {
-    icon: CheckCircle,
+    icon: CheckCircleIcon,
     step: "03",
     title: "Review Offers",
     description: "Log into your secure portal to compare offers, see terms, and choose the option that works best for you.",
   },
   {
-    icon: Banknote,
+    icon: BanknotesIcon,
     step: "04",
     title: "Receive Funding",
     description: "Accept your offer and funds are deposited directly. Track everything from application to funding in your portal.",
@@ -34,9 +34,9 @@ export function ProcessSection() {
   return (
     <section className="section-padding-y bg-secondary/40 border-y border-border/50" id="process">
       <div className="container-padding-x container mx-auto">
-        <div className="text-center mb-14 max-w-2xl mx-auto">
+        <div className="mb-14 mx-auto flex max-w-2xl flex-col items-center text-center gap-4">
           <Tagline>How It Works</Tagline>
-          <h2 className="heading-lg mb-4 text-foreground">Four steps to funding</h2>
+          <h2 className="heading-lg text-foreground">Four steps to funding</h2>
           <p className="text-lg text-muted-foreground font-light">
             We handle the complexity so you don&apos;t have to. Here&apos;s what the process looks like.
           </p>

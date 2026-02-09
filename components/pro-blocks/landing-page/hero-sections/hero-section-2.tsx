@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Shield, Clock, BadgeCheck } from "lucide-react"
+import { ArrowRightIcon, ShieldCheckIcon, ClockIcon, CheckBadgeIcon } from "@heroicons/react/24/outline"
 
 export function HeroSection2() {
   return (
@@ -16,7 +16,7 @@ export function HeroSection2() {
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto gap-8">
           {/* Trust signal */}
           <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10">
-            <Shield className="h-4 w-4 text-primary" />
+            <ShieldCheckIcon className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium text-primary">Small Business Lending Marketplace</span>
           </div>
 
@@ -39,7 +39,7 @@ export function HeroSection2() {
             <Button size="lg" className="shadow-md px-8 text-base h-12" asChild>
               <a href="/#eligibility">
                 Check Your Eligibility
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRightIcon className="ml-2 h-4 w-4" />
               </a>
             </Button>
             <Button variant="outline" size="lg" className="bg-transparent text-base h-12 px-8 border-border" asChild>
@@ -50,15 +50,15 @@ export function HeroSection2() {
           {/* Trust indicators */}
           <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8 pt-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
-              <BadgeCheck className="h-4 w-4 text-primary/70" />
+              <CheckBadgeIcon className="h-4 w-4 text-primary/70" />
               <span>No upfront fees</span>
             </div>
             <div className="flex items-center gap-2">
-              <Clock className="h-4 w-4 text-primary/70" />
+              <ClockIcon className="h-4 w-4 text-primary/70" />
               <span>Decisions in days, not months</span>
             </div>
             <div className="flex items-center gap-2">
-              <Shield className="h-4 w-4 text-primary/70" />
+              <ShieldCheckIcon className="h-4 w-4 text-primary/70" />
               <span>Bank-level encryption</span>
             </div>
           </div>

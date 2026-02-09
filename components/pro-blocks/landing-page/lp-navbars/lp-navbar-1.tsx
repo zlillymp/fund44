@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import { useState } from "react"
 import Link from "next/link"
 
@@ -10,6 +10,7 @@ const MENU_ITEMS = [
   { label: "How It Works", href: "/#process" },
   { label: "Why Fund44", href: "/#why" },
   { label: "FAQ", href: "/#faq" },
+  { label: "Calculator", href: "/calculator" },
   { label: "Apply", href: "/apply" },
   { label: "Portal", href: "/portal" },
 ] as const
@@ -47,7 +48,7 @@ export function LpNavbar1() {
             onClick={toggleMenu}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
-            {isMenuOpen ? <X /> : <Menu />}
+            {isMenuOpen ? <XMarkIcon className="h-5 w-5" /> : <Bars3Icon className="h-5 w-5" />}
           </Button>
         </div>
 

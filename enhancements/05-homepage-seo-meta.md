@@ -1,14 +1,16 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Outfit } from "next/font/google"
-import "./globals.css"
+# Enhancement: Improve Homepage Meta Tags and SEO
 
-const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  weight: ["300", "400", "500", "600", "700", "800"],
-})
+## File to modify
+`app/layout.tsx`
 
+## Problem
+The current metadata is minimal — just a title and description. Missing Open Graph tags, Twitter cards, and other SEO fundamentals that affect social sharing and search visibility.
+
+## Requirements
+
+Update the `metadata` export to include:
+
+```typescript
 export const metadata: Metadata = {
   title: "Fund44 — SBA Loans & Business Capital, Simplified",
   description:
@@ -47,16 +49,8 @@ export const metadata: Metadata = {
     canonical: "https://fund44.com",
   },
 }
+```
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <head />
-      <body className={`${outfit.variable} relative antialiased`}>{children}</body>
-    </html>
-  )
-}
+## Important
+- Remove the `generator: "Next.js"` field — it serves no purpose and leaks technology info
+- Do NOT change anything else in layout.tsx (font, body classes, etc.)
